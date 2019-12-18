@@ -1,0 +1,25 @@
+#第一題A
+x<-c("abcdefg")
+ans1<-sapply(lapply(strsplit(as.character(x), NULL), rev), paste, collapse="")
+
+#第一題B
+y<-c("You,are")
+split_world<-strsplit(y,split=",")
+char1<-split_world[[1]][1]
+rev_char1<-sapply(lapply(strsplit(char1,NULL),rev),paste, collapse="")
+char2<-split_world[[1]][2]
+rev_char2<-sapply(lapply(strsplit(char2,NULL),rev),paste, collapse="")
+ans2<-paste(rev_char1,rev_char2)
+
+
+#第二題B
+input<-c(1:15)
+try=which(input%%5==0|input%%3==0)
+same=which(input%%5==0&input%%3==0)
+output<-input[-c(try)]
+output
+
+#第三題
+"直接先抽混合的那一包，若出抽來是鉛筆，元子比標籤的必是混合，而鉛筆標籤的是原子筆。"
+
+#第四題
